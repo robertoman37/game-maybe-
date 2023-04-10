@@ -1,7 +1,8 @@
 #include "CApp.h"
 
 void CApp::OnCleanup() {
-    Surf_Display = NULL;
+    screenSurface = NULL;
+    window = NULL;
     
     SDL_Quit();
 }

@@ -7,6 +7,8 @@ class CApp {
         bool         running;
         SDL_Surface* screenSurface;
         SDL_Window*  window;
+        int          WINDOW_WIDTH;
+        int          WINDOW_HEIGHT;
     public:
         CApp();
 

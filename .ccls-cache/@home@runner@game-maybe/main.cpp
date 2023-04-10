@@ -1,9 +1,28 @@
-// Using SDL and standard IO
-#include <SDL.h>
-#include <stdio.h>
+#include "CApp.h"
 
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+CApp::CApp() {
+    running = true;
+}
+int CApp::OnExecute(){
+    if(!OnInit()) {
+        return -1;
+    }
 
-int main(int argc, char *args[]) {
+    SDL_Event Event;
+
+    while (running) {
+        while(SDL_PollEvent(&Event)){
+            OnEvent(&Event);
+        }
+
+        OnLoop();
+        OnRender();
+    }
+
+    OnCleanup();
+    return 0;
+}
+int main(int argc, char* argv[]) {
+    CApp theApp;
+    return theApp.OnExecute();
 }

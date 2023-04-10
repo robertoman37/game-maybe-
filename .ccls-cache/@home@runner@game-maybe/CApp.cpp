@@ -9,7 +9,12 @@ int CApp::OnExecute(){
     }
 
     SDL_Event Event;
+    //Test stuff, delete this later
 
+    for (int i = 0; i < WINDOW_WIDTH) {
+        for (int j= 0; j < WINDOW_HEIGHT)
+    }
+    
     while (running) {
         while(SDL_PollEvent(&Event)){
             OnEvent(&Event);
