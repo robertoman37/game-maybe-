@@ -10,7 +10,6 @@ class CApp {
         SDL_Renderer* renderer;
         const int     WINDOW_WIDTH  = 340;
         const int     WINDOW_HEIGHT = 480;
-        int           spot[2] = {0, 0};
     public:
         CApp();
 

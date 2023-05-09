@@ -8,8 +8,9 @@ class CApp {
         SDL_Surface*  screenSurface;
         SDL_Window*   window;
         SDL_Renderer* renderer;
-        int           WINDOW_WIDTH  = 340;
-        int           WINDOW_HEIGHT = 480;
+        const int     WINDOW_WIDTH  = 340;
+        const int     WINDOW_HEIGHT = 480;
+        int           spot[2] = {0, 0};
     public:
         CApp();
 

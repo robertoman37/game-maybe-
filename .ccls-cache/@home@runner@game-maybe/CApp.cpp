@@ -5,6 +5,7 @@ CApp::CApp() {
 }
 int CApp::OnExecute(){
     if(!OnInit()) {
+        std::cout << SDL_GetError();
         return -1;
     }
 
