@@ -4,11 +4,12 @@
     #define _CApp_H_
 class CApp {
     private:
-        bool         running;
-        SDL_Surface* screenSurface;
-        SDL_Window*  window;
-        int          WINDOW_WIDTH;
-        int          WINDOW_HEIGHT;
+        bool          running;
+        SDL_Surface*  screenSurface;
+        SDL_Window*   window;
+        SDL_Renderer* renderer;
+        int           WINDOW_WIDTH  = 340;
+        int           WINDOW_HEIGHT = 480;
     public:
         CApp();
 

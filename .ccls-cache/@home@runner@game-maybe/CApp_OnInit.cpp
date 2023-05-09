@@ -9,7 +9,7 @@ bool CApp::OnInit() {
         return false;
     }
     screenSurface = SDL_GetWindowSurface(window);
-    SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, 0);
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     if (renderer == NULL)
         return false;
     return true;
