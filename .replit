@@ -1,6 +1,6 @@
 compile = "make -s"
 run = "./main"
-entrypoint = "CApp.cpp"
+entrypoint = "CApp/CApp.cpp"
 hidden = ["main", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
 
 [nix]

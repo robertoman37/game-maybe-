@@ -1,6 +1,6 @@
 #include <SDL.h>
 #include <iostream>
-#include "Player.h"
+#include "../Player/Player.h"
 #ifndef _CApp_H_
     #define _CApp_H_
 class CApp {
