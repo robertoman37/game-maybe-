@@ -1,7 +1,8 @@
 #include "CApp.h"
 
-CApp::CApp() {
+CApp::CApp() : player(1920, 1080){
     running = true;
+    
 }
 int CApp::OnExecute(){
     if(!OnInit()) {
