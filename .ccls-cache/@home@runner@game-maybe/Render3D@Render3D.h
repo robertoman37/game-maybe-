@@ -18,5 +18,7 @@ class Render3D {
         Vec2 TransformPoint(Vec3 point);
 
         void RenderLine(Vec3 p1, Vec3 p2, SDL_Renderer *renderer);
+
+        void SetView(int rot[3], int pos[3]);
 };
 #endif

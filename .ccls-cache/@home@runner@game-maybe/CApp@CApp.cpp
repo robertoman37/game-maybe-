@@ -1,10 +1,10 @@
 #include "CApp.h"
 
-CApp::CApp() : player(1920, 1080){
+CApp::CApp() {
     running = true;
     
 }
-int CApp::OnExecute(){
+int CApp::OnExecute() {
     if(!OnInit()) {
         std::cout << SDL_GetError();
         return -1;

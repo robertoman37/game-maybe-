@@ -1,9 +1,11 @@
 #include <SDL.h>
 #include <iostream>
+#include "../Render3D/Render3D.h"
 #ifndef _CApp_H_
     #define _CApp_H_
 class CApp {
     private:
+        Render3D      Renderer3D;
         bool          running;
         SDL_Surface*  screenSurface;
         SDL_Window*   window;

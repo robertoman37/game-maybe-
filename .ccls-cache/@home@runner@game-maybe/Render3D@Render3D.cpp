@@ -22,7 +22,7 @@ Vec2 Render3D::TransformPoint(Vec3 point){
 
     c = {
         {(int)cos(camera.rot.z), (int)sin(camera.rot.z), 0},
-        {(int)-sin(camera.rot.z), (int)cos(camera.rot.z), 0}
+        {(int)-sin(camera.rot.z), (int)cos(camera.rot.z), 0},
         {0, 0, 1}
     };
 
@@ -44,10 +44,10 @@ Vec2 Render3D::TransformPoint(Vec3 point){
     Matrix *Me = new Matrix(e);
 
     Matrix result = *Ma * *Mb * *Mc * (*Md - *Me);
-    vector<vector<double>> res = result.getraw();
+    vector<vector<int>> res = result.getraw();
 
-    Vec2 fin = {(SCREEN_WIDTH/2) * (int)res[0][0] / (int)res[0][2],
-                (SCREEN_HEIGHT/2) * (int)res[0][1] / (int)res[0][2]};
+    Vec2 fin = {(SCREEN_WIDTH/2) * res[0][0] / res[0][2],
+                (SCREEN_HEIGHT/2) * res[0][1] / res[0][2]};
     
     return fin;
 }
@@ -60,4 +60,14 @@ void Render3D::RenderLine(Vec3 p1, Vec3 p2, SDL_Renderer *renderer) {
     end = TransformPoint(p2);
 
     SDL_RenderDrawLine(renderer, start.x, start.y, end.x, end.y);
+}
+
+void Render3D::SetView(int rot[3], int pos[3]) {
+    camera.rot.x = rot[0];
+    camera.rot.y = rot[1];
+    camera.rot.z = rot[2];
+    
+    camera.pos.x = rot[0];
+    camera.pos.y = rot[1];
+    camera.pos.z = rot[2];
 }

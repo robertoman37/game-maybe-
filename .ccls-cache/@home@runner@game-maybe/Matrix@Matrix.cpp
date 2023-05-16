@@ -9,15 +9,6 @@ Matrix::Matrix(vector<vector<int>> mr) {
     }
 }
 
-Matrix::Matrix(vector<vector<double>> mr) {
-    rowsize = mr.size();
-    colsize = mr[0].size();
-    vec.resize(rowsize);
-    for (int i = 0; i < rowsize; i++) {
-        vec[i] = mr[i];
-    }
-}
-
 Matrix::Matrix(int a) {
     rowsize = 1;
     colsize = 1;
@@ -26,14 +17,6 @@ Matrix::Matrix(int a) {
 
 vector<vector<int>> Matrix::getraw() {
     return vec;
-}
-
-int Matrix::rowsum(vector<int> other) {
-    int sum = 0;
-    for (int i = 0; i < other.size()) {
-        sum+=other[i];
-    }
-    return sum;
 }
 
 Matrix Matrix::operator*(int other) {
