@@ -20,22 +20,22 @@ void Player::OnEvent(SDL_Event* Event) {
         switch (Event->key.keysym.scancode) {
         case SDL_SCANCODE_W:
             if (coll) {
-                pos[1]-=5;
+                pos[1]-=step;
             }
             break;
         case SDL_SCANCODE_S:
             if (coll) {
-                pos[1]+=5;
+                pos[1]+=step;
             }
             break;
         case SDL_SCANCODE_A:
             if (coll) {
-                pos[0]-=5;
+                pos[0]-=step;
             }
             break;
         case SDL_SCANCODE_D:
             if (coll) {
-                pos[0]+=5;
+                pos[0]+=step;
             }
             break;
         default:
@@ -45,7 +45,7 @@ void Player::OnEvent(SDL_Event* Event) {
 }
 
 void Player::OnRender(SDL_Renderer* renderer) {
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    SDL_SetRenderDrawColor(renderer, 100, 0, 0, 255);
     SDL_RenderDrawLine(renderer, pos[0], pos[1], pos[0]+10, pos[1]);
     SDL_RenderDrawLine(renderer, pos[0]+10, pos[1], pos[0]+10, pos[1]+10);
     SDL_RenderDrawLine(renderer, pos[0]+10, pos[1]+10, pos[0], pos[1]+10);

@@ -7,6 +7,7 @@ class Player{
         int pos[2];
         int WINDOW_WIDTH;
         int WINDOW_HEIGHT;
+        int step = 5;
     public:
         Player(int Ww, int Wh);
 
@@ -15,5 +16,7 @@ class Player{
         void OnRender(SDL_Renderer* renderer);
 
         bool CheckEdge();
+
+        bool CheckWall();
 };
 #endif

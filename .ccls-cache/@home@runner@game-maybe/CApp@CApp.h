@@ -1,6 +1,5 @@
 #include <SDL.h>
 #include <iostream>
-#include "../Player/Player.h"
 #ifndef _CApp_H_
     #define _CApp_H_
 class CApp {
@@ -11,8 +10,6 @@ class CApp {
         SDL_Renderer* renderer;
         int           WINDOW_WIDTH  = 1920;
         int           WINDOW_HEIGHT = 1080;
-        int           spot[2] = {0, 0};
-        Player        player;
     public:
         CApp();
 
