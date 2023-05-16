@@ -9,6 +9,15 @@ Matrix::Matrix(vector<vector<int>> mr) {
     }
 }
 
+Matrix::Matrix(vector<vector<double>> mr) {
+    rowsize = mr.size();
+    colsize = mr[0].size();
+    vec.resize(rowsize);
+    for (int i = 0; i < rowsize; i++) {
+        vec[i] = mr[i];
+    }
+}
+
 Matrix::Matrix(int a) {
     rowsize = 1;
     colsize = 1;

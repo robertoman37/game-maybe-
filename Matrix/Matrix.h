@@ -10,6 +10,8 @@ class Matrix {
     public:
         Matrix(vector<vector<int>> mr);
 
+        Matrix(vector<vector<double>> mr);
+
         Matrix(int a);
 
         Matrix operator-(Matrix other);
@@ -20,8 +22,8 @@ class Matrix {
 
         Matrix operator*(int other);
 
-        int rowsum(vector<int> other);
+        int rowsum(vector<double> other);
 
-        vector<vector<int>> getraw();
+        vector<vector<double>> getraw();
 };
 #endif
